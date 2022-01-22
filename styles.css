@@ -1,0 +1,264 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /*scroll-snap-type: x mandatory;*/
+    scroll-snap-type: y mandatory;
+} 
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body{
+    background-color: #8ac;
+    font-size: 16px;
+}
+
+.titulo{
+    text-align: center;
+    color:  #000000;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.titulo2{
+    text-align: center;
+    color:  #fff;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}*/
+
+.subtitulo{
+    text-align: center;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divisor{
+    background-color: #42997c;
+}
+
+.boton{
+    background-color: #000000;
+    color: #f5f1f1;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: auto;
+}
+
+.boton:hover{
+    background-color: #7a1f1f;
+}
+
+.navegador{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegador a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navegador a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (min-width: 550px) {
+    body{
+        background-color: #8ac;
+        background-image: linear-gradient(to top, #dfe9f3 0%, #fff 100%);
+    }
+}
+
+/*intentando modificar el navegador hacia abajo "vertical"*/
+@media (max-width: 512px) {
+    .navegador{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*align-items: center;*/
+        text-align: center;
+    }
+    .navegador a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1rem;
+        background: #000;
+    }
+    .contenido-hero{
+        position: absolute;
+        background-color: rgba(0, 0, 0, .5);
+        width: 100%;   
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero{
+    background-image: url(https://mott.pe/noticias/wp-content/uploads/2018/10/las-20-mejores-paginas-para-vender-fotos-por-internet.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 420px;
+    position: relative;
+}
+
+.title2{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+} 
+
+/*Creando la caja con el contenedor0, es en si el menu*/
+
+.contenedor0{
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+    background-color: #fff;
+    padding: 2rem;
+    margin: 5rem 20rem 5rem 20rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+/*fin del menu*/
+
+/*los servicios*/
+
+.servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: #8ac;
+}
+.servicio p{
+    line-height: 2;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: #f4d03f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formulario, .navegador{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.formulario{
+    background-color: rgb(143, 141, 141);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+} 
+
+.tortuga{
+    margin: 0 auto;
+}
+
+.contenedor-campos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    column-gap: 1rem;
+}
+.entrada1{
+    width: 100%;
+    height: 3rem;
+}
+.divv1{
+    grid-column: 1 / 2;
+    padding: 1rem;
+}
+/*primero el de arriba  y asi sucesivamente*/
+.entrada2{
+    width: 100%;
+    height: 3rem;
+}
+.divv2{
+    grid-column: 2 / 3;
+    padding: 1rem;
+}
+/*aqui acaba el segundo*/
+.entrada3{
+    width: 100%;
+    height: 3rem;
+}
+.divv3{
+    grid-column: 1 / 3;
+    margin: 1rem;
+}
+/*aqui acaba el tres*/
+.entrada4{
+    width: 100%;
+}
+.divv4{
+    grid-column: 1 / 2;
+    margin: 1rem;
+}
+
+.entrada12{
+    text-align: left;
+}
+/*termina el cuadro cuatro*/
+
+.bot input{
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.bot input:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.footer p{
+    text-align: center;
+}
